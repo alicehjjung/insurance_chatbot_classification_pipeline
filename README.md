@@ -1,5 +1,5 @@
 # insurance_chatbot_classification_pipeline
-## 암보험상담 챗봇을위한LLM 기반고객질의유형분류 파이프라인
+## 암 보험 상담 챗봇을 위한 LLM 기반 고객 질의 유형 분류 파이프라인
 
 ### Clustering
 - **pdf_partitioning.py**  
