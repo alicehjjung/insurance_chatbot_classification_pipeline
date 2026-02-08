@@ -1,4 +1,39 @@
-# insurance_chatbot_classification_pipeline
+# LLM-based user query classification pipeline
+Recent advances in Large Language Models (LLMs) have enabled chatbots to be used not only for general conversations but also as domain-specific consultation tools. In sensitive domains such as insurance, where accuracy and careful information delivery are critical, correctly identifying user query types is essential.   
+
+This project proposes an LLM-based user query classification pipeline for a cancer insurance consultation chatbot. Assuming a label-scarce setting where predefined query categories do not exist, we applied K-Means clustering to insurance policy summaries and medical dialogue datasets to derive meaningful query clusters. Based on these clusters, query categories were defined, and a synthetic dataset was generated using LLMs.   
+
+Using the generated dataset, we built a zero-shot LLM-based query classifier. Experimental results show that categories with clear linguistic patterns achieve relatively strong classification performance, whereas semantically overlapping categories degrade performance.   
+
+This work demonstrates a practical approach to defining query categories and building classification systems using LLMs, even in the absence of clearly labeled datasets.
+
+### Clustering
+
+-**pdf_partitioning.py**
+Splits PDF documents into meaningful text chunks for downstream processing.
+
+-**get_dataset.py**
+Loads external datasets from Hugging Face.
+
+-**data_preprocessing.py**
+Performs text preprocessing tasks such as cleaning and normalization.
+
+-**clustering.py**
+Applies the K-Means algorithm to cluster text data.
+
+-**data_sampling.py**
+Samples 10 data points from each cluster for analysis and dataset construction.
+
+### Synthetic Data Generation
+
+-**SyntheticData_generation.py**
+Generates synthetic data for each cluster using an LLM.
+
+### Text Classification
+
+-**Classifier.py**
+Implements an LLM-based zero-shot query classifier.
+
 ## 암 보험 상담 챗봇을 위한 LLM 기반 고객 질의 유형 분류 파이프라인
 
 ### Clustering
