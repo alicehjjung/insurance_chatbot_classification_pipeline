@@ -7,6 +7,9 @@ Using the generated dataset, we built a zero-shot LLM-based query classifier. Ex
 
 This work demonstrates a practical approach to defining query categories and building classification systems using LLMs, even in the absence of clearly labeled datasets.
 
+#### Report
+[View Report](report_kor.pdf)
+
 ### Clustering
 
 -**pdf_partitioning.py**
